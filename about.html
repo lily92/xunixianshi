@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>虚拟现实</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header  class="wow fadeIn">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="ny-banner positionr wow fadeIn" >
+    <img src="images/about-banner.jpg" alt="" srcset="" class="w100">
+    <div class="positionb flex flex-center">
+      <div class="text-center new-banner-txt">
+        <img src="images/top-section.png" alt="" srcset="">
+        <p class="fon32 colorf about-banner-p">AR/MR领域顶尖技术型企业</p>
+      </div>
+    </div>
+  </div>
+  <!-- end banner -->
+
+  <!--star  about  -->
+  <div class="about bgf positionr">
+    <div class="max1440">
+      <!-- 关于我们描述 -->
+      <div class="item1 " >
+        <h2 class="fon36 wow fadeIn">关于Ximmerse</h2>
+        <div class="fon18 minh250 wow fadeIn">
+          空间计算时代交互技术引领者，AR/MR领域顶尖技术型企业。创立于2015年3月，技术团队由60余名顶尖的国内外算法科学家和资深工程师组成，围绕AR/MR交互进行深度技术研发和专利布局。由高通、联想、广发、奥飞动漫、CCI、MYEG等顶级资本投资，与联想（Lenovo）和美国迪士尼（Disney）联合打造全球首款消费级AR头显——Mirage“星球大战：绝地挑战”,成为目前全球畅销的增强现实设备。
+        </div>
+      </div>
+
+      <!-- 公司发展历史 -->
+      <div class="item2">
+        <h2 class="fon36 wow fadeIn">公司发展历史</h2>
+        <!-- list1 -->
+        <div class="list1 ">
+          <ul class="historylist1 flex just-between" id="historylist1">
+
+          </ul>
+          <script id="history_tpl" type="text/html">
+              {{#  layui.each(d.list, function(index, item){ }}
+              <li class='wow fadeInUp'  data-wow-delay="0.{{index}}s">
+                  <div class="history-img positionr">
+                    <img src="images/history-img-bg.jpg" alt="" srcset="" class="w100">
+                    <div class="positionb">
+                        <img src="{{item.img}}" alt="" srcset="" class="w100">
+                      </div>
+                  </div>
+                  <div>
+                    <p class="fon20"><b>{{item.time}}</b></p>
+                    <div class="fon18 ">
+                       {{item.desc}}
+                    </div>
+                  </div>
+                </li>
+                {{#  }); }}
+         </script>
+        </div>
+        <!-- end list1 -->
+        <div class="list-line wow fadeInLeft" data-wow-delay="0.6s">
+
+        </div>
+        <!-- list2 -->
+        <div class="list2">
+          <ul class="historylist2 flex just-between" id="historylist2">
+
+          </ul>
+          <script id="history_tpl2" type="text/html">
+                {{#  layui.each(d.list, function(index, item){ }}
+                <li class='wow fadeInUp'  data-wow-delay="1.{{index}}s">
+                    <div>
+                      <p class="fon20"><b>{{item.time}}</b></p>
+                      <div class="fon18 ">
+                         {{item.desc}}
+                      </div>
+                    </div>
+                    <div class="history-img positionr">
+                        <img src="images/history-img-bg.jpg" alt="" srcset="" class="w100">
+                        <div class="positionb">
+                            <img src="{{item.img}}" alt="" srcset="" class="w100">
+                          </div>
+                      </div>
+                  </li>
+                  {{#  }); }}
+           </script>
+        </div>
+        <!--end  list2 -->
+
+        <script>
+          layui.use('laytpl', function () {
+            var laytpl = layui.laytpl;
+            var historylist = {
+              //品牌新闻数据
+              "list": [
+                {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear V",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }
+              ]
+            }
+            var historylist2 = {
+              //品牌新闻数据
+              "list": [
+                {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }, {
+                  "id": "02",
+                  "time": "2015年12月",
+                  "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                  "desc": " 联合三星Gear VR推出6DOF方案",
+                  "img": "images/history-img.jpg"
+                }
+              ]
+            }
+
+            var historys_tpl = history_tpl.innerHTML;
+            var view = document.getElementById('historylist1');
+            laytpl(historys_tpl).render(historylist, function (html) {
+              view.innerHTML = html;
+            });
+
+            var historys2_tpl = history_tpl2.innerHTML;
+            var view = document.getElementById('historylist2');
+            laytpl(historys2_tpl).render(historylist2, function (html) {
+              view.innerHTML = html;
+            });
+
+          })
+        </script>
+      </div>
+
+      <!--star  我的合作伙伴 -->
+      <div class="hezuo padding70">
+        <h2 class="fon36 wow fadeIn">我的合作伙伴</h2>
+        <ul class=" flex hezuo-list row" id="hezuo_list">
+         
+        </ul>
+        <script id="hezuo_tpl" type="text/html">
+            {{#  layui.each(d.list, function(index, item){ }}
+            <li class='wow fadeInUp'  data-wow-delay="0.{{index}}s">
+                <a href="{{item.link}}" target='_blank'><img src="{{item.img}}" alt="" srcset=""></a>
+              </li>
+            {{#  }); }}
+       </script>
+        <script>
+          layui.use('laytpl', function () {
+            var laytpl = layui.laytpl;
+            var hezuolist = {
+              "list": [
+                {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-1.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-2.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-3.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-4.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-5.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-6.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-7.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-8.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-9.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-10.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-11.jpg"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-12.jpg"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-13.png"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-14.jpg"
+                }, {
+                  "id": "02",
+                  "link": "http://baidu.com",
+                  "img": "images/hz-15.png"
+                }
+              ]
+            }
+
+            var hezuo_tpls = hezuo_tpl.innerHTML;
+            var view_hezuo = document.getElementById('hezuo_list');
+            laytpl(hezuo_tpls).render(hezuolist, function (html) {
+              view_hezuo.innerHTML = html;
+            })
+          })
+
+        </script>
+
+      </div>
+      <!--end 我的合作伙伴 -->
+
+      <!--star 办公地点 -->
+      <div class="address">
+        <h2 class="fon36 wow fadeIn">公司办公地点</h2>
+        <ul class="address-list text-center flex just-between padding70">
+          <li   class="wow fadeInUp"  data-wow-delay="0.1s">
+            <p><span class="fon36 addess-city">广州</span></p>
+            <div class="fon18 address-txt">
+              <p>广东省广州市海珠区琶洲大道83号宝地</p>
+            </div>
+          </li>
+          <li class="wow fadeInUp" data-wow-delay="0.2s">
+            <p><span class="fon36 addess-city">深圳</span></p>
+            <div class="fon18 address-txt">
+              <p>广东省深圳市南山区北环大道9106号</p>
+            </div>
+          </li>
+          <li class="wow fadeInUp" data-wow-delay="0.3s">
+            <p><span class="fon36 addess-city">美国</span></p>
+            <div class="fon18 address-txt">
+              <p>C/O WeWork, 1601 Vine St. - 6th FloorLos Angeles, CA 90028, USA</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--end 办公地点 -->
+    </div>
+    <div class="padding70 about-contact">
+      <div class="max1440 just-between flex text-center">
+        <div class="about-contact-left">
+          <p class="fon36 colorf">联系我们</p>
+          <p class="padding70"><img src="images/icon-fj.png" alt="" sizes="" srcset=""></p>
+          <p class="fon20 colorf">info@ximmerse.com</p>
+        </div>
+        <div class="about-contact-right">
+          <p class="fon36 colorf">订阅我们</p>
+          <p class="padding70"><img src="images/icon-message.png" alt="" sizes="" srcset=""></p>
+          <div class="dy-form flex just-between">
+            <input type="text" value="" class="dy-txt fon16" placeholder="您的邮箱">
+            <button class="news-btn trans">提交</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end about -->
+
+
+  <!--star  footer -->
+  <footer class="footer ">
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

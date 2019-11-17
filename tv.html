@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>虚拟现实</title>
+</head>
+
+
+<body>
+  <!-- header -->
+  <header class="wow fadeIn">
+  </header>
+  <!--end  header -->
+
+  <div class="bg0">
+    <!--star banner -->
+    <div class="ny-banner positionr wow fadeIn">
+      <img src="images/tv-banner.jpg" alt="" srcset="" class="w100">
+      <div class="positionb  flex flex-end">
+        <div class="max1440  " >
+          <div class="tv-banner text-right  flex flex-end">
+              <img src="images/tv-banner-txt.png" alt="" srcset="" class="new-banner-txt"  data-depth="0.4">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        var tv_banner = $('.tv-banner').get(0);
+        var tv_bannerp = new Parallax(tv_banner);
+      </script>
+    <!-- end banner -->
+
+    <div class="tv-item1">
+      <div class="max1440">
+        <div class="colorf text-center wow fadeIn">
+          <p class="fon36">欢迎来到HoloWorld哈乐世界!</p>
+          <p>你准备好进入神奇有趣的HoloWorld了吗？带上头显，美丽的海洋生物在你身边遨游，和活泼可爱的小恐龙来一次喂食互动吧，<br>
+            置身于神秘的森林中，等你来探索！</p>
+        </div>
+        <div class="padding30 news-swiper">
+          <div class="swiper-container item-list-activity">
+            <ul class="tv-list just-between  swiper-wrapper colorf" id="tvlist1">
+            </ul>
+            <div class="swiper-pagination-active visible-xs" id="tv1"></div>
+          </div>
+
+          <script id="newslist_tpl" type="text/html">
+            {{#  layui.each(d.list, function(index, item){ }}
+              <li  class ='swiper-slide text-center positionr wow fadeInUp' data-wow-delay="0.{{index}}s">
+                 <p class='fon24 padding30'>{{item.title}}</p>
+                 <div  class='fon18 lineh2 text-left text-just minh144 line4'>
+                  {{item.desc}}
+                 </div>
+                 <div class="item-bg">
+                   <img src="{{item.img}}" alt="" srcset="">
+                 </div>
+              </li>
+              {{#  }); }}
+           </script>
+          <script>
+            layui.use('laytpl', function () {
+              var laytpl = layui.laytpl;
+              var tvlist1 = {
+                "list": [
+                  {
+                    "id": "02",
+                    "desc": "基于Ximmerse推出的Rhino X MR交互系统，HoloWorld科技娱乐品牌诞生！搭配全球最新的MR技术，带给你最酷炫的交互体验！",
+                    "title": "理念",
+                    "img": "images/tv-item.png"
+                  }, {
+                    "id": "02",
+                    "desc": "空间时代需要更创新的交互技术来感知未来世界，HoloWorld的部分用户是小朋友，在家人或朋友的陪伴下，同一空间，近距离的实时互动，能充分感知空间世界的存在！",
+                    "title": "概念",
+                    "img": "images/tv-item2.png"
+                  }, {
+                    "id": "02",
+                    "desc": "HoloWorld旨在通过领先的MR技术，以“科技娱乐”为理念，引领线下娱乐新潮流，带来全新的虚实交互体验！",
+                    "title": "目标",
+                    "img": "images/tv-item3.png"
+                  }
+                ]
+              }
+              var news_tpls = newslist_tpl.innerHTML;
+              var view = document.getElementById('tvlist1');
+              laytpl(news_tpls).render(tvlist1, function (html) {
+                view.innerHTML = html;
+                var swiper_act = new Swiper('.item-list-activity', {
+                  slidesPerView: 3,
+                  spaceBetween: 70,
+                  breakpoints: {
+                    1200: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
+                    767: {
+                      slidesPerView: 2,
+                      spaceBetween: 15,
+                    },
+                    640: {
+                      slidesPerView: 2,
+                      spaceBetween: 15,
+                    },
+                    414: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    }
+                  },
+                  pagination: {
+                    el: '#tv1',
+                    // type: 'fraction',
+                    clickable: true
+                  },
+                });
+              });
+            })
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <!--star  tv-banner1 -->
+    <div class="tv-banner positionr colorf">
+      <img src="images/tv-b1.png" alt="" srcset="" class="w100">
+      <div class="positionb flex  flex-center">
+        <div class="max1440 h100 flex al-center">
+          <div class="w36 wow fadeInLeft" data-wow-duration="3">
+            <p class="p-text-center"><img src="images/tv-b1-txt.png" alt="" class="tv-banner-logo"></p>
+            <div class="text " >
+              <p class="fon36 p-text-center">MR全息博物馆</p>
+              <div class="text-just fon18 lineh2">
+                MR全息博物馆不仅能让小朋友在这里安全地探索无尽的大自然，还能寓教于乐。父母的陪伴式体验，温馨的亲子互动交流让小朋友更愿意主动沟通与分享。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end  tv-banner1 -->
+
+    <!--star  tv-banner2 -->
+    <div class="tv-banner positionr colorf">
+      <img src="images/tv-b2.png" alt="" srcset="" class="w100">
+      <div class="positionb flex  flex-center">
+        <div class="max1440 h100 flex al-center flex-end">
+          <div class="w36 wow fadeInRight"  data-wow-duration="3">
+            <p  class="p-text-center"><img src="images/tv-b2-txt.png" alt="" class="tv-banner-logo"></p>
+            <div class="text ">
+              <p class="fon36 p-text-center">MR捕鱼之王</p>
+              <div class="text-just fon18 lineh2">
+                MR捕鱼之王是一款极易上手的休闲游戏， 用枪支体会捕鱼乐趣，更有Buff捕鱼机能等独 特玩法，玩家冲击更高得分排行，完成更 有挑战性的成就。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end  tv-banner2 -->
+
+    <!--star  tv-banner3 -->
+    <div class="tv-banner positionr colorf">
+      <img src="images/tv-b3.png" alt="" srcset="" class="w100">
+      <div class="positionb flex  flex-center">
+        <div class="max1440 h100 flex al-center ">
+            <div class="w36 wow fadeInLeft" data-wow-duration="3">
+            <p  class="p-text-center"><img src="images/tv-b3-txt.png" alt="" class="tv-banner-logo"></p>
+            <div class="text">
+              <p class="fon36 p-text-center">恐龙时代</p>
+              <div class="text-just fon18 lineh2">
+                MR恐龙时代是一款针对亲子人群打造的MR恐龙世界风格科普类体验。选蛋孵化、恐龙喂食等新颖的交互方式深受用户喜爱。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="circle circle-green"></div>
+    </div>
+    <!--end  tv-banner3 -->
+
+
+    <!--star 视频列表 -->
+    <div class="max1440 padding70">
+      <p class="text-center fon36 colorf lineh2 wow fadeIn">点进来查看HoloWorld的体验！</p>
+      <br>
+      <div class="swiper-container item-list-video news-swiper">
+        <ul class="just-between  swiper-wrapper" id="video_list">
+        </ul>
+        <div class="swiper-pagination-active" id="tv2"></div>
+      </div>
+    </div>
+    <script id="video_tpl" type="text/html">
+        {{#  layui.each(d.list, function(index, item){ }}
+        <li  class ='swiper-slide wow fadeInUp' data-url='{{item.url}}'  data-wow-delay="0.{{index}}s">
+            <div class="positionr">
+              <img src="images/tv-player-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+              <div class="positionb">
+                <img src="{{item.img}}" alt="" srcset="" class="w100">
+              </div>
+              <div class="positionb flex flex-center video-masters">
+                 <div>
+                    <img src="images/tv-player-btn.png" alt="" srcset="" class="w100">
+                 </div>
+              </div>
+            </div>
+            <p  class='text-center colorf fon18 tv-video-name'>{{item.title}}</p>
+          </li>
+          {{#  }); }}
+     </script>
+    <script>
+      layui.use('laytpl', function () {
+        var laytpl = layui.laytpl;
+        var video_list = {
+          "list": [
+            {
+              "id": "02",
+              "utl": "http://www.baidu.com",
+              "title": "MR全息博物馆",
+              "img": "images/tv-player-img.jpg"
+            }, {
+              "id": "02",
+              "utl": "http://www.baidu.com",
+              "title": "新品Rhino X亮相MWC",
+              "img": "images/tv-player-img.jpg"
+            }, {
+              "id": "02",
+              "utl": "http://www.baidu.com",
+              "title": "新品Rhino X亮相MWC",
+              "img": "images/tv-player-img.jpg"
+            }, {
+              "id": "02",
+              "utl": "http://www.baidu.com",
+              "title": "新品Rhino X亮相MWC",
+              "img": "images/tv-player-img.jpg"
+            }
+          ]
+        }
+        var video_tpls = video_tpl.innerHTML;
+        var view = document.getElementById('video_list');
+        laytpl(video_tpls).render(video_list, function (html) {
+          view.innerHTML = html;
+          var swiper_act = new Swiper('.item-list-video', {
+            slidesPerView: 3,
+            spaceBetween: 70,
+
+            breakpoints: {
+              1200: {
+                slidesPerView:3,
+                spaceBetween:20,
+              },
+              767: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              414: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              }
+            },
+            pagination: {
+              el: '#tv2',
+              // type: 'fraction',
+              clickable: true
+            },
+          });
+        });
+      })
+    </script>
+    <!--end 视频列表 -->
+
+    <!--star  一站式MR全息娱乐方案 -->
+    <div class="padding70 positionr tv-case">
+      <div class=" max900 zindex-3">
+        <div class="colorf text-center wow fadeIn">
+          <p class="fon36">一站式MR全息娱乐方案</p>
+          <p>HoloWorld全息娱乐方案及具灵活性，这赋予了场景更多可能性。无论是娱乐内容的运营升级还是空间大小的适
+            配，都可根据需求提供最合适的线下娱乐方案。</p>
+        </div>
+        <ul class="flex just-between fon20 mrlist colorf text-center padding70">
+          <li class="wow  fadeInUp" data-wow-delay="0.1s" >
+            <div class="mr-list-img">
+              <img src="images/mr-1.png" alt="" srcset="">
+            </div>
+            <p>空间设计</p>
+          </li>
+          <li class="wow  fadeInUp" data-wow-delay="0.2s"  >
+            <div class="mr-list-img">
+              <img src="images/mr-2.png" alt="" srcset="">
+            </div>
+            <p>空间设计</p>
+          </li>
+          <li class="wow  fadeInUp" data-wow-delay="0.3s"  >
+            <div class="mr-list-img">
+              <img src="images/mr-3.png" alt="" srcset="">
+            </div>
+            <p>空间设计</p>
+          </li>
+          <li class="wow  fadeInUp" data-wow-delay="0.4s" >
+            <div class="mr-list-img">
+              <img src="images/mr-4.png" alt="" srcset="">
+            </div>
+            <p>空间设计</p>
+          </li>
+          <li class="wow  fadeInUp" data-wow-delay="0.5s" >
+            <div class="mr-list-img">
+              <img src="images/mr-5.png" alt="" srcset="">
+            </div>
+            <p>空间设计</p>
+          </li>
+        </ul>
+      </div>
+      <div class="tv-case-img">
+        <img src="images/tvbg-1.png" alt="" srcset="">
+      </div>
+    </div>
+
+    <!-- end 一站式MR全息娱乐方案 -->
+
+    <!--star  large-bg  -->
+    <div class="large-bg positionr">
+      <!--star 站台列表 -->
+      <div class="max1440 ">
+        <p class="text-center fon36 colorf lineh2 wow fadeIn">展台设计美观且易于设置</p>
+        <br>
+        <div class="swiper-container item-list-video news-swiper">
+          <ul class="just-between  swiper-wrapper" id="zhantai_list">
+          </ul>
+          <div class="swiper-pagination-active" id="tv3"></div>
+        </div>
+      </div>
+      <div class="circle-right"></div>
+      <script id="zhantai_tpl" type="text/html">
+                {{#  layui.each(d.list, function(index, item){ }}
+                <li  class ='swiper-slide wow fadeInUp' data-url='{{item.url}}' data-wow-delay='0.{{index}}s'>
+                    <div class="positionr">
+                      <img src="images/tv-player-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+                      <div class="positionb">
+                        <img src="{{item.img}}" alt="" srcset="" class="w100">
+                      </div>
+                    </div>
+                    <p  class='text-center colorf fon18 tv-video-name'>{{item.title}}</p>
+                  </li>
+                  {{#  }); }}
+       </script>
+      <script>
+        layui.use('laytpl', function () {
+          var laytpl = layui.laytpl;
+          var zhantai_list = {
+            "list": [
+              {
+                "id": "02",
+                "utl": "http://www.baidu.com",
+                "title": "MR全息博物馆",
+                "img": "images/tv-player-img.jpg"
+              }, {
+                "id": "02",
+                "utl": "http://www.baidu.com",
+                "title": "MR钓鱼之王",
+                "img": "images/tv-player-img.jpg"
+              }, {
+                "id": "02",
+                "utl": "http://www.baidu.com",
+                "title": "新品Rhino X亮相MWC",
+                "img": "images/tv-player-img.jpg"
+              }, {
+                "id": "02",
+                "utl": "http://www.baidu.com",
+                "title": "新品Rhino X亮相MWC",
+                "img": "images/tv-player-img.jpg"
+              }
+            ]
+          }
+          var zhantai_tpls = zhantai_tpl.innerHTML;
+          var view = document.getElementById('zhantai_list');
+          laytpl(zhantai_tpls).render(zhantai_list, function (html) {
+            view.innerHTML = html;
+            var swiper_act = new Swiper('.item-list-video', {
+              slidesPerView: 3,
+              spaceBetween: 70,
+
+              breakpoints: {
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                767: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+                414: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                }
+              },
+              pagination: {
+                el: '#tv3',
+                // type: 'fraction',
+                clickable: true
+              },
+            });
+          });
+        })
+      </script>
+      <!--end 站台列表 -->
+
+      <!--star 硬件清单 -->
+      <div class="yj-list ">
+        <p class="text-center fon36 colorf lineh2">硬件清单</p>
+        <ul class="padding70 colorf text-center flex just-between ">
+          <li class="wow fadeInUp"  data-wow-delay='0.1s'>
+            <div class="yj-img positionr">
+              <img src="images/tvp-1.png" alt="" srcset="" class="w100">
+              <div class="positionb">
+                <img src="images/tvp-1.png" alt="" srcset="" class="w100">
+              </div>
+            </div>
+            <p class="fon16">Rhino X 头显</p>
+          </li>
+          <li class="wow fadeInUp"  data-wow-delay='0.2s'>
+            <div class="yj-img positionr">
+              <img src="images/tvp-1.png" alt="" srcset="" class="w100">
+              <div class="positionb">
+                <img src="images/tvp-2.png" alt="" srcset="" class="w100">
+              </div>
+            </div>
+            <p class="fon16">Rhino X 头显</p>
+          </li>
+          <li class="wow fadeInUp"  data-wow-delay='0.3s'>
+            <div class="yj-img positionr">
+              <img src="images/tvp-1.png" alt="" srcset="" class="w100">
+              <div class="positionb">
+                <img src="images/tvp-3.png" alt="" srcset="" class="w100">
+              </div>
+            </div>
+            <p class="fon16">Rhino X 头显</p>
+          </li>
+          <li class="wow fadeInUp"  data-wow-delay='0.4s'>
+            <div class="yj-img positionr">
+              <img src="images/tvp-1.png" alt="" srcset="" class="w100">
+              <div class="positionb">
+                <img src="images/tvp-4.png" alt="" srcset="" class="w100">
+              </div>
+            </div>
+            <p class="fon16">Rhino X 头显</p>
+          </li>
+        </ul>
+      </div>
+      <!--end 硬件清单 -->
+
+      <!-- 精彩瞬间 -->
+      <div class="jincai">
+        <div class="max1440">
+          <div class="colorf text-center wow fadeIn">
+            <p class="fon36">HoloWorld精彩瞬间</p>
+            <p>火爆的MR全息娱乐HoloWorld已登陆全球，超过十万人打卡体验！ </p>
+          </div>
+          <div class="swiper-container jingcai_lists news-swiper padding70">
+            <ul class="just-between  swiper-wrapper" id="jincai_list">
+            </ul>
+            <div class="swiper-pagination-active " id="tv4"></div>
+          </div>
+        </div>
+        <script id="jingcai_tpl" type="text/html">
+          {{#  layui.each(d.list, function(index, item){ }}
+          <li  class ='swiper-slide wow fadeInUp ' data-url='{{item.url}}' >
+              <div class="positionr">
+                <img src="images/jingcai-1-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+                <div class="positionb">
+                  <img src="{{item.img}}" alt="" srcset="" class="w100">
+                </div>
+              </div>
+            </li>
+            {{#  }); }}
+         </script>
+        <script>
+          layui.use('laytpl', function () {
+            var laytpl = layui.laytpl;
+            var jincai_list = {
+              "list": [
+                {
+                  "id": "02",
+                  "title": "MR全息博物馆",
+                  "img": "images/jingcai-1.jpg"
+                }, {
+                  "id": "02",
+                  "title": "MR钓鱼之王",
+                  "img": "images/jingcai-1.jpg"
+                }, {
+                  "id": "02",
+                  "title": "新品Rhino X亮相MWC",
+                  "img": "images/jingcai-1.jpg"
+                }, {
+                  "id": "02",
+                  "title": "新品Rhino X亮相MWC",
+                  "img": "images/jingcai-1.jpg"
+                }, {
+                  "id": "02",
+                  "title": "新品Rhino X亮相MWC",
+                  "img": "images/jingcai-1.jpg"
+                }, {
+                  "id": "02",
+                  "title": "新品Rhino X亮相MWC",
+                  "img": "images/jingcai-1.jpg"
+                }
+              ]
+            }
+            var jingcai_tpls = jingcai_tpl.innerHTML;
+            var view = document.getElementById('jincai_list');
+            laytpl(jingcai_tpls).render(jincai_list, function (html) {
+              view.innerHTML = html;
+              var swiper_act = new Swiper('.jingcai_lists', {
+                slidesPerView: 3,
+                slidesPerColumn: 2,
+                spaceBetween: 0,
+                breakpoints: {
+                  767: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                  },
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 0,
+                  },
+                  414: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  }
+                },
+                pagination: {
+                  el: '#tv4',
+                  // type: 'fraction',
+                  clickable: true
+                },
+              });
+            });
+          })
+        </script>
+      </div>
+      <!-- end精彩瞬间 -->
+    </div>
+
+    <!-- end large-bg -->
+
+
+
+    <!--star 联系我们 -->
+    <div class="contact-tv flex-center flex ">
+      <div class="text-center colorf lineh2 wow fadeIn">
+        <p class="fon36">联系我们</p>
+        <div class="fon26">
+          <p>info@ximmerse.com</p>
+          <p>020-340377553</p>
+        </div>
+      </div>
+    </div>
+    <!--end  联系我们 -->
+  </div>
+
+
+
+
+  <!--star  footer -->
+  <footer>
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>
