@@ -60,7 +60,12 @@ select,
 .text-left {
   text-align: left;
 }
-
+.itemlist li{
+    background-image:url(../images/bg1.png);
+    background-repeat:no-repeat;
+    background-size: 100%;
+    
+}
 .text-right {
   text-align: right;
 }
@@ -70,7 +75,10 @@ select,
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
+.positionb img{
+    
+      box-shadow: 0px 8px 15.2px 0.8px rgba(0, 0, 0, 0.28);
+}
 .line2,
 .line4,
 .line3 {
@@ -708,7 +716,7 @@ footer::before {
 }
 
 .index .index-item2-img {
-  margin: 20px  15px 120px;
+  margin: 20px  0 120px;
 }
 
 .index .item2-left {
@@ -853,7 +861,7 @@ footer::before {
 }
 
 .hezuo-index .hezuo-list li {
-  padding: 10px 10px;
+  padding: 10px 15px;
 }
 
 .hezuo-index .hezuo-list li img {
@@ -905,8 +913,9 @@ footer::before {
 
 .itemlist li {
   width: 30%;
-  box-shadow: 0 0 20px white inset;
-  border-radius: 5px;
+  background-image:url(../images/bg1.png);
+  background-repeat:no-repeat;
+  background-size: 100%;
 }
 
 .baseline {
@@ -1061,6 +1070,7 @@ footer::before {
   right: 0;
   bottom: 0;
   width: 45%;
+
 }
 
 .minh144 {

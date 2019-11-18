@@ -118,10 +118,10 @@
         </ul>
         <div class="swiper-pagination-active"></div>
       </div>
-      <p class="text-center wow fadeInUp"><a href="news.htmlclass="index-news-more trans">查看更多</a></p>
+      <p class="text-center "><a href="news.html" class="index-news-more trans">查看更多</a></p>
       <script id="news_tpl" type="text/html">
           {{#  layui.each(d.list, function(index, item){ }}
-          <li  class ='swiper-slide wow fadeInUp' data-wow-delay="0.{{index}}s">
+          <li  class ='swiper-slide wow fadeIn ' data-wow-delay="0.{{index}}s">
               <div class="news-img positionr">
                 <img src="images/index-new-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
                 <div class="positionb">
@@ -131,7 +131,7 @@
               <div class="news-con text-center">
                 <p class="date fon16 color6">{{item.date}}</p>
                 <p class="fon20 title colorf  line2">{{item.title}}</p>
-                <p><a href="newsdetail.html?id={{item.id}}"  class='news-more fon18'>查看更多</a></p>
+                <p class='wow fadeIn'><a href="newsdetail.html?id={{item.id}}"  class='news-more fon18'>查看更多</a></p>
               </div>
             </li>
             {{#  }); }}
