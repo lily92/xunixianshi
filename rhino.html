@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
-  <script src="js/parallax.min.js"></script>
+ 
   <script src="js/wow.min.js"></script>
   <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -30,20 +30,13 @@
     <div class="ny-banner positionr wow fadeIn">
       <img src="images/r-banner-bg.jpg" alt="" srcset="" class="w100">
       <div class="positionb flex flex-center">
-        <div class="new-banner-txt ">
+        <div class="new-banner-txt text-center ">
           <p class="r-banner-txt"> <img src="images/r-banner-txt.png" alt="" srcset="" data-depth="0.6"></p>
           <p>&nbsp;</p>
           <p class="scene"> <img src="images/r-banner-img.png" alt="" srcset="" data-depth="0.3"></p>
         </div>
       </div>
     </div>
-    <script>
-      var scene = $('.scene').get(0);
-      var parallaxInstance = new Parallax(scene);
-
-      var scene_txt = $('.r-banner-txt').get(0);
-      var scene_txtp = new Parallax(scene_txt);
-    </script>
     <!-- end banner -->
 
     <!--star  video -->
@@ -61,7 +54,7 @@
           <p class="fon36 colorf max1440 wow fadeIn">MR从此大不同</p>
           <div class="flex item-pad just-between baseline">
             <ul class="product-item1-left itemlist text-center colorf flex just-between">
-              <li class="li-padding wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="2">
+              <li class="li-padding wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2">
                 <div class="positionr ">
                   <img src="images/r-icon-bg1.png" alt="" srcset="" class="margin0-auto">
                   <div class="positionb flex flex-center">
@@ -74,7 +67,7 @@
                   单，体验更自然
                 </div>
               </li>
-              <li class="li-padding wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="2">
+              <li class="li-padding wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2">
                 <div class="positionr ">
                   <img src="images/r-icon-bg1.png" alt="" srcset="" class="margin0-auto">
                   <div class="positionb flex flex-center">
@@ -86,7 +79,7 @@
                   灵活跟踪系统，稳定跟踪任何物体
                 </div>
               </li>
-              <li class="li-padding wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="2">
+              <li class="li-padding wow fadeIn" data-wow-delay="0.3s" data-wow-duration="2">
                 <div class="positionr ">
                   <img src="images/r-icon-bg1.png" alt="" srcset="" class="margin0-auto">
                   <div class="positionb flex flex-center">
@@ -100,7 +93,7 @@
                 </div>
               </li>
             </ul>
-            <div class="product-item1-right wow fadeInRight" data-wow-duration="3">
+            <div class="product-item1-right wow fadeIn" data-wow-duration="3">
               <div class="right-product">
                 <img src="images/r-img1.png" alt="" srcset="" data-depth="0.4">
               </div>
@@ -112,11 +105,11 @@
           </div>
         </div>
         <div class=" padding70  product-item1 itemlist max1440 just-between baseline flex">
-          <div class="item2-w45 wow fadeInLeft" data-wow-duration="3">
+          <div class="item2-w45 wow fadeIn" data-wow-duration="3">
             <img src="images/r-img2.png" alt="" srcset="">
           </div>
           <ul class=" product-item2 itemlist text-center colorf flex just-between">
-            <li class="li-padding wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="2">
+            <li class="li-padding wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2">
               <div class="positionr ">
                 <img src="images/r-icon-bg1.png" alt="" srcset="" class="margin0-auto">
                 <div class="positionb flex flex-center">
@@ -129,7 +122,7 @@
                 单，体验更自然
               </div>
             </li>
-            <li class="li-padding wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="2">
+            <li class="li-padding wow fadeIn" data-wow-delay="0.2s" data-wow-duration="2">
               <div class="positionr ">
                 <img src="images/r-icon-bg1.png" alt="" srcset="" class="margin0-auto">
                 <div class="positionb flex flex-center">
@@ -151,7 +144,7 @@
     <!--star  product-large-img -->
     <div class="product-large-img padding70">
       <ul class="flex just-between product-large-list">
-        <li class="wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="2">
+        <li class="" data-wow-delay="0.1s" data-wow-duration="2">
           <div class="large-img  positionr">
             <img src="images/rr-img1-bg.jpg" alt="" srcset="" class="w100">
             <div class="positionb">
@@ -163,7 +156,7 @@
             </div>
           </div>
         </li>
-        <li class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="2">
+        <li class="" data-wow-delay="0.2s" data-wow-duration="2">
           <div class="large-img  positionr">
             <img src="images/rr-img1-bg.jpg" alt="" srcset="" class="w100">
             <div class="positionb">
@@ -175,7 +168,7 @@
             </div>
           </div>
         </li>
-        <li class="wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="2">
+        <li class="" data-wow-delay="0.3s" data-wow-duration="2">
           <div class="large-img  positionr">
             <img src="images/rr-img1-bg.jpg" alt="" srcset="" class="w100">
             <div class="positionb">
@@ -201,7 +194,7 @@
       <script id="news_tpl" type="text/html">
         {{#  layui.each(d.list, function(index, item){ }}
         <li class="flex just-between" >
-            <div class="cj-con flex  al-center  wow fadeInUp">
+            <div class="cj-con flex  al-center  ">
               <div>
                 <p class="fon26 colorf lineh2">{{item.title}}</p>
                 <div class="fon18  text-just c-gray  lineh2">
@@ -209,7 +202,7 @@
                 </div>
               </div>
             </div>
-            <div class="cj-img positionr wow fadeInUp">
+            <div class="cj-img positionr ">
               <img src="images/rc-img1.jpg" alt="" srcset="" class="w100">
               <div class="positionb">
                 <img src="{{item.img}}" alt="" srcset="" class="w100">
@@ -264,7 +257,7 @@
     <!--star 联系我们 -->
     <div class="max1440">
       <div class="r-contact flex just-between">
-        <div class="contact-left flex  al-center c-gray wow fadeInUp" data-wow-duration="3">
+        <div class="contact-left flex  al-center c-gray wow fadeIn" data-wow-duration="3">
           <div class="w100  p-text-center">
             <p class="fon26 lineh2">期待<span class="colorb">开发者</span>的加入！ </p>
             <div class="lineh2">
@@ -278,15 +271,15 @@
             </div>
           </div>
         </div>
-        <div class="contact-right w50 wow fadeInUp" data-wow-duration="3">
+        <div class="contact-right w50 wow fadeIn" data-wow-duration="3">
           <img src="images/r-join-img1.png" alt="" srcset="" class="w100">
         </div>
       </div>
 
       <!--star 技术规格 -->
-      <div class="padding70">
-        <p class="fon36 colorf">技术规格</p>
-        <table width='80%' class="guige-table">
+      <div class="padding70 ">
+        <p class="fon36 colorf wow fadeIn">技术规格</p>
+        <table width='80%' class="guige-table wow fadeIn">
           <tr>
             <td>
               <p class="fon24 colorf">CPU</p>

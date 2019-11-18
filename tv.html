@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
-  <script src="js/parallax.min.js"></script>
+ 
   <script src="js/wow.min.js"></script>
   <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -31,9 +31,9 @@
     <div class="ny-banner positionr wow fadeIn">
       <img src="images/tv-banner.jpg" alt="" srcset="" class="w100">
       <div class="positionb  flex flex-end">
-        <div class="max1440  " >
+        <div class="max1440 " >
           <div class="tv-banner text-right  flex flex-end">
-              <img src="images/tv-banner-txt.png" alt="" srcset="" class="new-banner-txt"  data-depth="0.4">
+              <img src="images/tv-banner-txt.png" alt="" srcset="" class="new-banner-txt wow fadeInRight"  data-depth="0.4">
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
 
           <script id="newslist_tpl" type="text/html">
             {{#  layui.each(d.list, function(index, item){ }}
-              <li  class ='swiper-slide text-center positionr wow fadeInUp' data-wow-delay="0.{{index}}s">
+              <li  class ='swiper-slide text-center positionr wow fadeIn' data-wow-delay="0.{{index}}s">
                  <p class='fon24 padding30'>{{item.title}}</p>
                  <div  class='fon18 lineh2 text-left text-just minh144 line4'>
                   {{item.desc}}
@@ -203,7 +203,7 @@
     </div>
     <script id="video_tpl" type="text/html">
         {{#  layui.each(d.list, function(index, item){ }}
-        <li  class ='swiper-slide wow fadeInUp' data-url='{{item.url}}'  data-wow-delay="0.{{index}}s">
+        <li  class ='swiper-slide wow fadeIn' data-url='{{item.url}}'  data-wow-delay="0.{{index}}s">
             <div class="positionr">
               <img src="images/tv-player-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
               <div class="positionb">
@@ -293,31 +293,31 @@
             配，都可根据需求提供最合适的线下娱乐方案。</p>
         </div>
         <ul class="flex just-between fon20 mrlist colorf text-center padding70">
-          <li class="wow  fadeInUp" data-wow-delay="0.1s" >
+          <li class="" data-wow-delay="0.1s" >
             <div class="mr-list-img">
               <img src="images/mr-1.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="wow  fadeInUp" data-wow-delay="0.2s"  >
+          <li class="" data-wow-delay="0.2s"  >
             <div class="mr-list-img">
               <img src="images/mr-2.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="wow  fadeInUp" data-wow-delay="0.3s"  >
+          <li class="" data-wow-delay="0.3s"  >
             <div class="mr-list-img">
               <img src="images/mr-3.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="wow  fadeInUp" data-wow-delay="0.4s" >
+          <li class="" data-wow-delay="0.4s" >
             <div class="mr-list-img">
               <img src="images/mr-4.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="wow  fadeInUp" data-wow-delay="0.5s" >
+          <li class="" data-wow-delay="0.5s" >
             <div class="mr-list-img">
               <img src="images/mr-5.png" alt="" srcset="">
             </div>
@@ -347,7 +347,7 @@
       <div class="circle-right"></div>
       <script id="zhantai_tpl" type="text/html">
                 {{#  layui.each(d.list, function(index, item){ }}
-                <li  class ='swiper-slide wow fadeInUp' data-url='{{item.url}}' data-wow-delay='0.{{index}}s'>
+                <li  class ='swiper-slide ' data-url='{{item.url}}' data-wow-delay='0.{{index}}s'>
                     <div class="positionr">
                       <img src="images/tv-player-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
                       <div class="positionb">
@@ -427,7 +427,7 @@
       <div class="yj-list ">
         <p class="text-center fon36 colorf lineh2">硬件清单</p>
         <ul class="padding70 colorf text-center flex just-between ">
-          <li class="wow fadeInUp"  data-wow-delay='0.1s'>
+          <li class="wow "  data-wow-delay='0.1s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
@@ -436,7 +436,7 @@
             </div>
             <p class="fon16">Rhino X 头显</p>
           </li>
-          <li class="wow fadeInUp"  data-wow-delay='0.2s'>
+          <li class="wow "  data-wow-delay='0.2s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
@@ -445,7 +445,7 @@
             </div>
             <p class="fon16">Rhino X 头显</p>
           </li>
-          <li class="wow fadeInUp"  data-wow-delay='0.3s'>
+          <li class="wow "  data-wow-delay='0.3s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
@@ -454,7 +454,7 @@
             </div>
             <p class="fon16">Rhino X 头显</p>
           </li>
-          <li class="wow fadeInUp"  data-wow-delay='0.4s'>
+          <li class="wow "  data-wow-delay='0.4s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
@@ -482,7 +482,7 @@
         </div>
         <script id="jingcai_tpl" type="text/html">
           {{#  layui.each(d.list, function(index, item){ }}
-          <li  class ='swiper-slide wow fadeInUp ' data-url='{{item.url}}' >
+          <li  class ='swiper-slide ' data-url='{{item.url}}' >
               <div class="positionr">
                 <img src="images/jingcai-1-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
                 <div class="positionb">
