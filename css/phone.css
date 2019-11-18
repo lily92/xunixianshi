@@ -233,7 +233,7 @@
     width: 100%;
   }
   .tv-banner .tv-banner-logo {
-    max-width: 60%;
+    max-width: 150px;
   }
   .logo {
     position: relative;
@@ -362,18 +362,22 @@
   .mrlist li {
     width: 33.33%;
     padding: 0 2%;
+    margin-bottom: 15px;
   }
   .yj-list li {
     width: 48%;
   }
   .max1440 {
-    width: 90%;
+    width: 94%;
   }
   .contact-tv {
     height: 30vh;
   }
   .padding30 {
     padding: 15px;
+  }
+  footer::before {
+    height: 8px;
   }
 }
 

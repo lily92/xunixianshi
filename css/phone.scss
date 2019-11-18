@@ -116,7 +116,7 @@ $colorfa: #fafafa;
   .tv-banner{
     .positionb.flex.flex-center{ position: static;}
     .w36{ width: 100%;}
-    .tv-banner-logo{  max-width: 60%;}
+    .tv-banner-logo{  max-width:150px;}
   }
 
   // nav 
@@ -226,12 +226,14 @@ $colorfa: #fafafa;
   // end nav 
   #tv2,#tv1{  padding-bottom: 0;}
   .mrlist{ justify-content: center;
-    li{ width: 33.33%; padding: 0 2%;}
+    li{ width: 33.33%; padding: 0 2%; margin-bottom: 15px;}
   }
   .yj-list li{ width: 48%;}
-  .max1440{ width: 90%;}
+  .max1440{ width: 94%;}
   .contact-tv{ height: 30vh;}
   .padding30{ padding: 15px;}
+
+  footer::before{ height: 8px;}
 }
 
 @media (max-width: 640px){

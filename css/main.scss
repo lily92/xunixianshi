@@ -240,14 +240,15 @@ header.active{ background:rgba($color: #000000, $alpha: 0.5);}
 .news{
   .new-left{ width: 60%;}
   .news-right{ width: 37%; }
-  .dy-txt{ height: 30px; border: 0; border-bottom: 1px solid #a3a3a3; width: 100%; margin: 40px 0;}
+  .dy-txt{ height: 30px; border: 0; border-bottom: 1px solid #a3a3a3; width: 100%; margin: 40px 0; border-radius: 0;}
   .news-btn{ width: 126px; height: 40px; border: 0; background: $color3; border: 1px solid $color3; color: $colorf; border-radius: 5px; box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.15);}
   .news-btn:hover{ background: $colorf; color: $color3;}
   .new-right-zgh{ padding-top: 45px;}
   .new-code{ padding-top: 10px;}
   .news-con{ padding-top: 20px;}
   .title{ padding: 10px 0;}
-  .news-more{  background: $colorf; box-shadow: 0  0 5px rgba($color: #000000, $alpha: 0.5); display: inline-block; width: 135px; line-height: 40px; text-align: center; margin-top: 20px;}
+  .news-more{  background: $colorf; box-shadow: 0  0 5px rgba($color: #000000, $alpha: 0.5); display: inline-block; width: 135px; line-height: 40px; text-align: center; margin-top: 20px; transition: .3s linear all;}
+  .news-more:hover{ background: $color0; color: $colorf;}
   .newslist li{ margin-bottom: 50px;}
 }
 .boxshadow{box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.15);}
@@ -387,7 +388,7 @@ footer::before{ display: block; content: ''; width: 100%; height: 16px; backgrou
 .li-padding{ padding: 20px 30px;}
 .itemlist .item-pad{justify-content: space-between;}
 .itemlist{
-  li{ width: 30%; box-shadow:  0 0 30px  rgba($color: #fff, $alpha: 1) inset; border-radius: 5px;}
+  li{ width: 30%; box-shadow:  0 0 20px  rgba($color: #fff, $alpha: 1) inset; border-radius: 5px;}
 }
 .baseline{ align-items: baseline;}
 .product-item2{ width: 44%;
