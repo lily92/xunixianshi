@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
- 
+
   <script src="js/wow.min.js"></script>
   <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -31,17 +31,15 @@
     <div class="ny-banner positionr wow fadeIn">
       <img src="images/tv-banner.jpg" alt="" srcset="" class="w100">
       <div class="positionb  flex flex-end">
-        <div class="max1440 " >
+        <div class="max1440 ">
           <div class="tv-banner text-right  flex flex-end">
-              <img src="images/tv-banner-txt.png" alt="" srcset="" class="new-banner-txt wow fadeInRight"  data-depth="0.4">
+            <img src="images/tv-banner-txt.png" alt="" srcset="" class="new-banner-txt wow fadeInRight"
+              data-depth="0.4">
           </div>
         </div>
       </div>
     </div>
-    <script>
-        var tv_banner = $('.tv-banner').get(0);
-        var tv_bannerp = new Parallax(tv_banner);
-      </script>
+    
     <!-- end banner -->
 
     <div class="tv-item1">
@@ -139,7 +137,7 @@
         <div class="max1440 h100 flex al-center">
           <div class="w36 wow fadeInLeft" data-wow-duration="3">
             <p class="p-text-center"><img src="images/tv-b1-txt.png" alt="" class="tv-banner-logo"></p>
-            <div class="text " >
+            <div class="text ">
               <p class="fon36 p-text-center">MR全息博物馆</p>
               <div class="text-just fon18 lineh2">
                 MR全息博物馆不仅能让小朋友在这里安全地探索无尽的大自然，还能寓教于乐。父母的陪伴式体验，温馨的亲子互动交流让小朋友更愿意主动沟通与分享。
@@ -156,8 +154,8 @@
       <img src="images/tv-b2.png" alt="" srcset="" class="w100 wow fadeIn">
       <div class="positionb flex  flex-center">
         <div class="max1440 h100 flex al-center flex-end">
-          <div class="w36 wow fadeInRight"  data-wow-duration="3">
-            <p  class="p-text-center"><img src="images/tv-b2-txt.png" alt="" class="tv-banner-logo"></p>
+          <div class="w36 wow fadeInRight" data-wow-duration="3">
+            <p class="p-text-center"><img src="images/tv-b2-txt.png" alt="" class="tv-banner-logo"></p>
             <div class="text ">
               <p class="fon36 p-text-center">MR捕鱼之王</p>
               <div class="text-just fon18 lineh2">
@@ -175,8 +173,8 @@
       <img src="images/tv-b3.png" alt="" srcset="" class="w100 wow fadeIn">
       <div class="positionb flex  flex-center">
         <div class="max1440 h100 flex al-center ">
-            <div class="w36 wow fadeInLeft" data-wow-duration="3">
-            <p  class="p-text-center"><img src="images/tv-b3-txt.png" alt="" class="tv-banner-logo"></p>
+          <div class="w36 wow fadeInLeft" data-wow-duration="3">
+            <p class="p-text-center"><img src="images/tv-b3-txt.png" alt="" class="tv-banner-logo"></p>
             <div class="text">
               <p class="fon36 p-text-center">恐龙时代</p>
               <div class="text-just fon18 lineh2">
@@ -201,9 +199,15 @@
         <div class="swiper-pagination-active" id="tv2"></div>
       </div>
     </div>
+    <div class="video-master animated slideInRight flex flex-center">
+      <img src="images/btn-close.png" alt="" srcset="" class="close-btn">
+      <video class="animated flipInX video" controls
+        src=""
+        poster="images/index-about-img.jpg" id="video" />
+    </div>
     <script id="video_tpl" type="text/html">
         {{#  layui.each(d.list, function(index, item){ }}
-        <li  class ='swiper-slide wow fadeIn' data-url='{{item.url}}'  data-wow-delay="0.{{index}}s">
+        <li  class ='swiper-slide wow fadeIn' data-wow-delay="0.{{index}}s">
             <div class="positionr">
               <img src="images/tv-player-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
               <div class="positionb">
@@ -211,7 +215,7 @@
               </div>
               <div class="positionb flex flex-center video-masters">
                  <div>
-                    <img src="images/tv-player-btn.png" alt="" srcset="" class="w100">
+                    <img src="images/tv-player-btn.png" alt="" srcset="" class="w100 play-icon" data-url='{{item.url}}'  >
                  </div>
               </div>
             </div>
@@ -226,22 +230,22 @@
           "list": [
             {
               "id": "02",
-              "utl": "http://www.baidu.com",
+              "url": "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400",
               "title": "MR全息博物馆",
               "img": "images/tv-player-img.jpg"
             }, {
               "id": "02",
-              "utl": "http://www.baidu.com",
+              "url": "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400",
               "title": "新品Rhino X亮相MWC",
               "img": "images/tv-player-img.jpg"
             }, {
               "id": "02",
-              "utl": "http://www.baidu.com",
+              "url": "http://www.baidu.com",
               "title": "新品Rhino X亮相MWC",
               "img": "images/tv-player-img.jpg"
             }, {
               "id": "02",
-              "utl": "http://www.baidu.com",
+              "url": "http://www.baidu.com",
               "title": "新品Rhino X亮相MWC",
               "img": "images/tv-player-img.jpg"
             }
@@ -254,11 +258,10 @@
           var swiper_act = new Swiper('.item-list-video', {
             slidesPerView: 3,
             spaceBetween: 70,
-
             breakpoints: {
               1200: {
-                slidesPerView:3,
-                spaceBetween:20,
+                slidesPerView: 3,
+                spaceBetween: 20,
               },
               767: {
                 slidesPerView: 2,
@@ -279,6 +282,21 @@
               clickable: true
             },
           });
+          var video = document.getElementById('video')
+          $('#video_list li .play-icon').click(function (e) {
+            e.preventDefault();
+            $('.video-master').css('display', 'flex')
+            $('#video').attr('src',$(this).attr('data-url'))
+            video.play();
+
+          });
+          $('.close-btn').click(function (e) {
+            e.preventDefault();
+            $('.video-master').css('display', 'none')
+            video.pause();
+            $('#video').attr('src','')
+          });
+
         });
       })
     </script>
@@ -293,31 +311,31 @@
             配，都可根据需求提供最合适的线下娱乐方案。</p>
         </div>
         <ul class="flex just-between fon20 mrlist colorf text-center padding70">
-          <li class="" data-wow-delay="0.1s" >
+          <li class="" data-wow-delay="0.1s">
             <div class="mr-list-img">
               <img src="images/mr-1.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="" data-wow-delay="0.2s"  >
+          <li class="" data-wow-delay="0.2s">
             <div class="mr-list-img">
               <img src="images/mr-2.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="" data-wow-delay="0.3s"  >
+          <li class="" data-wow-delay="0.3s">
             <div class="mr-list-img">
               <img src="images/mr-3.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="" data-wow-delay="0.4s" >
+          <li class="" data-wow-delay="0.4s">
             <div class="mr-list-img">
               <img src="images/mr-4.png" alt="" srcset="">
             </div>
             <p>空间设计</p>
           </li>
-          <li class="" data-wow-delay="0.5s" >
+          <li class="" data-wow-delay="0.5s">
             <div class="mr-list-img">
               <img src="images/mr-5.png" alt="" srcset="">
             </div>
@@ -365,22 +383,22 @@
             "list": [
               {
                 "id": "02",
-                "utl": "http://www.baidu.com",
+                "url": "http://www.baidu.com",
                 "title": "MR全息博物馆",
                 "img": "images/tv-player-img.jpg"
               }, {
                 "id": "02",
-                "utl": "http://www.baidu.com",
+                "url": "http://www.baidu.com",
                 "title": "MR钓鱼之王",
                 "img": "images/tv-player-img.jpg"
               }, {
                 "id": "02",
-                "utl": "http://www.baidu.com",
+                "url": "http://www.baidu.com",
                 "title": "新品Rhino X亮相MWC",
                 "img": "images/tv-player-img.jpg"
               }, {
                 "id": "02",
-                "utl": "http://www.baidu.com",
+                "url": "http://www.baidu.com",
                 "title": "新品Rhino X亮相MWC",
                 "img": "images/tv-player-img.jpg"
               }
@@ -427,7 +445,7 @@
       <div class="yj-list ">
         <p class="text-center fon36 colorf lineh2">硬件清单</p>
         <ul class="padding70 colorf text-center flex just-between ">
-          <li class="wow "  data-wow-delay='0.1s'>
+          <li class="wow " data-wow-delay='0.1s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
@@ -436,7 +454,7 @@
             </div>
             <p class="fon16">Rhino X 头显</p>
           </li>
-          <li class="wow "  data-wow-delay='0.2s'>
+          <li class="wow " data-wow-delay='0.2s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
@@ -445,7 +463,7 @@
             </div>
             <p class="fon16">Rhino X 头显</p>
           </li>
-          <li class="wow "  data-wow-delay='0.3s'>
+          <li class="wow " data-wow-delay='0.3s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
@@ -454,7 +472,7 @@
             </div>
             <p class="fon16">Rhino X 头显</p>
           </li>
-          <li class="wow "  data-wow-delay='0.4s'>
+          <li class="wow " data-wow-delay='0.4s'>
             <div class="yj-img positionr">
               <img src="images/tvp-1.png" alt="" srcset="" class="w100">
               <div class="positionb">
